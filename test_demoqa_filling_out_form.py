@@ -23,6 +23,6 @@ def test_filling_form(open_browser):
     browser.element('#submit').press_enter()
 
     browser.element('#example-modal-sizes-title-lg').should(have.text('Thanks for submitting the form'))
-    browser.element('.table').should(have.texts('John', 'Doe', 'johndoe@gmail.com', 'Male', '2223331110', '04 April, 1901',
-                                                'Sports,Music', '221b, Baker street', 'Uttar Pradesh Lucknow'))
-
+    browser.element('.table').should(have.text(
+        'John Doe'and 'johndoe@gmail.com'and 'Male'and '2223331110'and '04 April,1901'and ''and 'Sports,Music'and
+        'python_label.png'and '221b, Baker street'and 'Uttar Pradesh Lucknow'))
